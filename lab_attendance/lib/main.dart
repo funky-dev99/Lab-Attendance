@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Slide to act Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
