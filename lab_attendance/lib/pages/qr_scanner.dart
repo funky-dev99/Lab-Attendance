@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:lab_attendance/pages/profile_page.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 
@@ -150,8 +151,16 @@ class _QRViewExampleState extends State<QRViewExample> {
       setState(() {
         result = scanData;
       });
+      // Navigate to ResultPage and pass the QR code data
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ProfilePage(qrCodeData: result!.code!),
+        ),
+      );
     });
   }
+
 
   void _onPermissionSet(BuildContext context, QRViewController ctrl, bool p) {
     log('${DateTime.now().toIso8601String()}_onPermissionSet $p');
