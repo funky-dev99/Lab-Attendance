@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
           onTap: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const QRViewExample()));
-          },
+          }, childText: 'Scan QR',
         ),
       ),
     );
